@@ -1,22 +1,21 @@
 /**
  * @author ThayumanaEaswar
- * @version 4.0
+ * @version 5.0
  */
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        // UC4: Using a String array and a loop for modularity and reusability
-        String[] banner = new String[7];
+        // UC5: Declaring and initializing the array in a single statement
+        String[] banner = {
+            String.join("", "  ****", " ****", " ****", " ****", " "),
+            String.join("", " *", "    *", " *", "    *", " *", "    *", " *", "    *"),
+            String.join("", " *", "    *", " *", "    *", " *", "    *", " *", "    *"),
+            String.join("", " *", "    *", " *", "    *", " ****", " ****", " "),
+            String.join("", " *", "    *", " *", "    *", " *", "     ", " *", "     "),
+            String.join("", " *", "    *", " *", "    *", " *", "     ", " *", "     "),
+            String.join("", "  ****", " ****", " *", "    ", " ****", " ")
+        };
 
-        // Populating the array using String.join() for memory efficiency
-        banner[0] = String.join("", "  ****", " ****", " ****", " ****", " ");
-        banner[1] = String.join("", " *", "    *", " *", "    *", " *", "    *", " *", "    *");
-        banner[2] = String.join("", " *", "    *", " *", "    *", " *", "    *", " *", "    *");
-        banner[3] = String.join("", " *", "    *", " *", "    *", " ****", " ****", " ");
-        banner[4] = String.join("", " *", "    *", " *", "    *", " *", "     ", " *", "     ");
-        banner[5] = String.join("", " *", "    *", " *", "    *", " *", "     ", " *", "     ");
-        banner[6] = String.join("", "  ****", " ****", " *", "    ", " ****", " ");
-
-        // Using an enhanced for-loop to print the banner lines
+        // Use an enhanced for-loop to iterate and display
         for (String line : banner) {
             System.out.println(line);
         }
